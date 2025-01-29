@@ -1,0 +1,111 @@
+/* 设置图片样式，使其覆盖整个视口并固定在背景 */
+.img-style {
+    width: 100vw; /* 图片宽度为视口宽度 */
+    height: 100vh; /* 图片高度为视口高度 */
+    object-fit: cover; /* 图片按比例填充容器，可能会裁剪 */
+    position: fixed; /* 固定定位，使图片不随页面滚动 */
+    z-index: -1; /* 将图片置于底层，作为背景 */
+}
+
+/* 卡片容器的样式 */
+.card-container {
+    background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    width: 60%; /* 容器宽度为父容器的60% */
+    height: 60vh; /* 容器高度为视口高度的60% */
+    border-radius: 15px; /* 圆角 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    padding: 20px; /* 内边距 */
+}
+
+/* 水平排列的 Flex 容器，内容靠左对齐 */
+.FLEX2 {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: start; /* 内容靠左对齐 */
+}
+
+/* 居中对齐的 Flex 容器 */
+.FLEX {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: 100vw; /* 宽度为视口宽度 */
+    height: 100vh; /* 高度为视口高度 */
+}
+
+/* 重置 body 的默认样式 */
+body {
+    margin: 0; /* 去掉 body 的默认外边距 */
+}
+
+/* 文本样式 */
+.text-style {
+    font-weight: bold; /* 字体加粗 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+/* 按钮样式 */
+button {
+    background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    border: none; /* 去掉边框 */
+    border-radius: 8px; /* 圆角 */
+    padding: 0.35rem; /* 内边距 */
+}
+
+/* 卡片布局的 Flex 容器 */
+.flex-card {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+/* 小卡片的样式 */
+.small-cards {
+    background-color: white; /* 白色背景 */
+    height: 200px; /* 固定高度 */
+    width: 200px; /* 固定宽度 */
+    border-radius: 1rem; /* 圆角 */
+    margin: 20px; /* 外边距 */
+    box-sizing: border-box; /* 盒模型为 border-box，内边距和边框包含在宽高中 */
+    padding: 10px; /* 内边距 */
+}
+
+/* 卡片内图片的样式 */
+.cards-img img {
+    border-radius: 1rem; /* 圆角 */
+    width: 100%; /* 图片宽度占满容器 */
+    height: 60%;
+}
+
+/* 图片高度为容器的60%*/
+.cards-gird {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background-color: white;}
+
+.card-size{
+    height: 40px;
+    border-radius:0.5rem;
+}
+.gap{
+    gap: 0.3rem;
+}
+.card1{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.card2{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.card3{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.flex123456{
+    display: flex;
+    justify-content: space-between;
+}
+.container-size{
+    max-height:calc(100% - 2.5rem - 2.5rem);
+}
+.overflow{
+    overflow-y:scroll;
+}

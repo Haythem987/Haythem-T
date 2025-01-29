@@ -1,0 +1,58 @@
+/* 卡片容器的样式 */
+.card-container {
+    background-color: rgba(255, 255, 255, 0.84); /* 设置背景颜色为白色，透明度为 84% */
+    border-radius: 10px; /* 设置圆角半径为 10px */
+    padding: 10px; /* 设置内边距为 10px */
+    width: 300px; /* 设置宽度为 300px */
+    height: 300px; /* 设置高度为 300px */
+    backdrop-filter: blur(10px); /* 背景区域添加模糊效果，模糊半径为 10px */
+}
+
+/* 外层卡片容器的样式 */
+.card-container1 {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 设置高度为视口高度的 100% */
+}
+
+/* 居中文本的样式 */
+.center {
+    text-align: center; /* 文本水平居中 */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+/* 按钮的样式 */
+.button-style {
+    border-width: 0; /* 去掉边框 */
+    padding: 10px; /* 设置内边距为 10px */
+    border-radius: 10px; /* 设置圆角半径为 10px */
+    color: red; /* 设置文字颜色为红色 */
+    background-color: lightgray; /* 设置背景颜色为浅灰色 */
+    transition: all ease-in-out 0.2s; /* 添加过渡效果，持续时间为 0.2 秒 */
+}
+
+/* 按钮的悬停状态样式 */
+.button-style:hover {
+    background-color: greenyellow; /* 悬停时背景颜色变为黄绿色 */
+    color: blue; /* 悬停时文字颜色变为蓝色 */
+}
+
+/* 底部外边距的样式 */
+.margin-bottom {
+    margin-bottom: 20px; /* 设置底部外边距为 20px */
+}
+
+/* 图片的样式 */
+.img-style {
+    width: 100vw; /* 设置宽度为视口宽度的 100% */
+    height: 100vh; /* 设置高度为视口高度的 100% */
+    object-fit: cover; /* 图片按比例缩放，覆盖整个容器 */
+    position: fixed; /* 固定定位，图片不随页面滚动 */
+    z-index: -1; /* 将图片置于底层 */
+}
+
+/* 全局 body 的样式 */
+body {
+    margin: 0; /* 去掉 body 的默认外边距 */
+}

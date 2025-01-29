@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="number1">分数</label>
+<input type="number" name="分数" id="number1">
+<button id="submit">输出评价</button>
+<div id="grade">成绩:</div>
+
+<script>
+    const numberDOM = document.getElementById('number1');
+    let submitDOM = document.getElementById('submit');
+    let gradeDOM = document.getElementById('grade');
+    let grade
+    submitDOM.onclick = () => {
+        let score = numberDOM.value
+        if (score >= 85) {
+            grade = "A"
+        } else if (score >= 70) {
+            grade = "B"
+        } else if(score>=60){
+            grade = "C"
+        }
+        else{
+            grade = "D"
+        }
+        gradeDOM.innerText=`成绩:${ grade }等级`
+    }
+</script>
+
+</body>
+</html>

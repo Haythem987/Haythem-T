@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!-- Background Image -->
+<img class="w-full h-screen object-cover fixed -z-10" src="img/80270936_p01.png" alt="Background">
+
+<!-- Login Form Container -->
+<div class="flex justify-center items-center w-screen h-screen">
+    <div class="w-96 bg-white rounded-lg shadow-2xl p-8">
+        <div class="flex flex-col items-center">
+            <!-- Title -->
+            <div class="text-3xl font-bold text-gray-800">Login System</div>
+            <div class="text-gray-500 mt-2" id="ResultText" >Welcome back! Please login or register</div>
+
+            <!-- Email Input -->
+            <div class="mt-6 w-full">
+                <label class="block text-sm font-medium text-gray-700" for="Email">Email</label>
+                <input
+                        type="email"
+                        id="Email"
+                        name="Email"
+                        class="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        placeholder="Enter your email"
+                >
+            </div>
+
+            <!-- Username Input -->
+            <div class="mt-4 w-full">
+                <label class="block text-sm font-medium text-gray-700" for="Username">Username</label>
+                <input
+                        type="text"
+                        id="Username"
+                        name="Username"
+                        class="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        placeholder="Enter your username"
+                >
+            </div>
+
+            <!-- Password Input -->
+            <div class="mt-4 w-full">
+                <label class="block text-sm font-medium text-gray-700" for="Password">Password</label>
+                <input
+                        type="password"
+                        id="Password"
+                        name="Password"
+                        class="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                        placeholder="Enter your password"
+                >
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-6 w-full flex justify-between">
+                <button id="Register"
+                        class="px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors"
+                >
+                    Register
+                </button>
+                <button id="Login"
+                        class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                >
+                    Login
+                </button>
+            </div>
+
+            <!-- View User List Button -->
+            <button id="LIST"
+                    class="mt-4 px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+            >
+                View User List (Console)
+            </button>
+        </div>
+    </div>
+</div>
+<script>src="DAY6.js"
+</script>
+
+</body>
+</html>

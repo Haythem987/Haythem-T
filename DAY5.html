@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="button">开始抽奖</button>
+<div id="result">抽奖结果</div>
+<script>
+    const buttonDOM = document.getElementById('button');
+    let resultDOM = document.getElementById('result');
+    const cars = ["SMALL", "MEDIUM", "BIG", "SUPER"]
+    buttonDOM.onclick = () => {
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+
+        let limit = 0
+        let index
+        const selectedItems = []
+        while (limit < 3) {
+            index = random(0, 4)
+            if (!selectedItems.includes(index)) {
+                selectedItems.push(index)
+                limit = limit + 1
+            }
+        }
+        const selected = selectedItems.map(index => cars[index]);
+        resultDOM.innerHTML = "抽中的是：" + selected.join(", ");
+
+
+    }
+
+</script>
+
+</body>
+</html>
