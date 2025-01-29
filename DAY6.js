@@ -7,19 +7,20 @@ class User {
 }
 
 function main() {
-    const emailTextDOM = document.getElementById('email');
-    const usernameTextDOM = document.getElementById('username');
-    const passwordTextDOM = document.getElementById('password');
-    const registerBtnDOM = document.getElementById('register');
+    const emailTextDOM = document.getElementById('Email');
+    const usernameTextDOM = document.getElementById('Username');
+    const passwordTextDOM = document.getElementById('Password');
+    const registerBtnDOM = document.getElementById('Register');
     const LoginBtnDOM = document.getElementById('Login');
-    const listBtnDOM = document.getElementById('list');
+    const listBtnDOM = document.getElementById('LIST');
     registerBtnDOM.addEventListener('click', () => {
         register(emailTextDOM.value, usernameTextDOM.value, passwordTextDOM.value);
     })
     LoginBtnDOM.addEventListener('click', () => {
-        login(emailTextDOM.value, usernameTextDOM.value, passwordTextDOM.value);
+        login(emailTextDOM.value, passwordTextDOM.value);
     })
-    listBtnDOM.addEventListener('click', () => {list();
+    listBtnDOM.addEventListener('click', () => {
+        list();
     })
 }
 
@@ -43,12 +44,13 @@ function login(email, password) {
         return
     }
     if (user.password === password) {
-        resultTextDOM.innerText = '欢迎回家$(user.username)';}
-    else{
+        resultTextDOM.innerText = `欢迎回家，${user.username}`;
+    } else {
         resultTextDOM.innerText = "密码错误";
     }
 
 }
+
 function list() {
     console.log(Userlist)
 }
